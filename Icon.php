@@ -31,7 +31,7 @@ class Icon
             $className = 'fa fa-circle-o';
         }
 
-        return '&nbsp;' . Html::tag('i', '&nbsp;', ['class' => $className]) . '&nbsp;';
+        return Html::tag('i', '', ['class' => $className]);
     }
 
     /**
