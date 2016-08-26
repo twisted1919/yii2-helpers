@@ -46,6 +46,7 @@ class Icon
             'delete' => 'fa fa-trash',
             'refresh'=> 'fa fa-refresh',
             'back'   => 'fa fa-arrow-circle-left',
+            'forward'=> 'fa fa-arrow-circle-right',
             'prev'   => 'fa fa-chevron-circle-left',
             'next'   => 'fa fa-chevron-circle-right',
             'save'   => 'fa fa-save',
