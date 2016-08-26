@@ -8,7 +8,6 @@ class StringHelper extends \yii\helpers\StringHelper
      * @param $string
      * @param $length
      * @param string $replacement
-     * @param null $encoding
      * @return mixed
      */
     public static function truncateMiddle($string, $length, $replacement = '...')
