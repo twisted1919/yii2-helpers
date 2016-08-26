@@ -50,6 +50,7 @@ class Icon
             'prev'   => 'fa fa-chevron-circle-left',
             'next'   => 'fa fa-chevron-circle-right',
             'save'   => 'fa fa-save',
+            'cancel' => 'fa fa-times-circle-o',
         ];
     }
 }
