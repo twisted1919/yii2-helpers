@@ -150,34 +150,4 @@ class Common
 
         return round($bytes, $precision) . ' ' . $units[$pow];
     }
-
-    /**
-     * @param $string
-     * @param string $separator
-     * @return array|trim
-     */
-    public static function getArrayFromString($string, $separator = ',')
-    {
-        $string = trim($string);
-        if (empty($string)) {
-            return [];
-        }
-        $array = explode($separator, $string);
-        $array = array_map('trim', $array);
-        $array = array_unique($array);
-        return $array;
-    }
-
-    /**
-     * @param array $array
-     * @param string $glue
-     * @return string
-     */
-    public static function getStringFromArray(array $array, $glue = ', ')
-    {
-        if (empty($array)) {
-            return '';
-        }
-        return implode($glue, $array);
-    }
 }
