@@ -46,7 +46,7 @@ class Icon
         return [
             'create' => 'fa fa-plus-square',
             'update' => 'fa fa-pencil-square-o',
-            'view'   => 'fa fa-eye-open',
+            'view'   => 'fa fa-eye',
             'delete' => 'fa fa-trash',
             'refresh'=> 'fa fa-refresh',
             'back'   => 'fa fa-arrow-circle-left',
