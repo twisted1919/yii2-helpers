@@ -21,6 +21,10 @@ class Icon
         if (!$className && strpos($name, 'fa') === 0) {
             $className = 'fa ' . $name;
         }
+
+        if (!$className && strpos($name, 'ion') === 0) {
+            $className = 'ion ' . $name;
+        }
         
         if (!$className) {
             $icons     = self::getRegisteredActionIcons();
