@@ -16,7 +16,8 @@
   "require": {
     "php": ">=5.4",
     "yiisoft/yii2": "*",
-    "twisted1919/yii2-shortcut-functions": "*"
+    "twisted1919/yii2-shortcut-functions": "*",
+    "symfony/finder": "^2.8"
   },
   "autoload": {
     "psr-4": {
