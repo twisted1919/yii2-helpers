@@ -11,7 +11,7 @@ use yii\db\Expression;
  * Class WebMigration
  * @package app\helpers
  */
-class WebMigration extends Object
+class WebMigration extends Component
 {
     /**
      * @var string
