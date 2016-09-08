@@ -1,6 +1,6 @@
 <?php
 
-namespace app\helpers;
+namespace twisted1919\helpers;
 
 use Symfony\Component\Finder\Finder;
 use yii\base\Object;
