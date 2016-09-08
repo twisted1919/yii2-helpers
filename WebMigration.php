@@ -3,7 +3,7 @@
 namespace twisted1919\helpers;
 
 use Symfony\Component\Finder\Finder;
-use yii\base\Object;
+use yii\base\Component;
 use yii\db\Query;
 use yii\db\Expression;
 
