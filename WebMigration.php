@@ -219,7 +219,7 @@ class WebMigration extends Component
      * @param int $maxUp
      * @return WebMigration
      */
-    public function safeUp($maxUp = 0)
+    public function safeUp($maxUp = 1)
     {
         return $this->up($maxUp, 'safeUp');
     }
@@ -228,7 +228,7 @@ class WebMigration extends Component
      * @param $maxDown
      * @return WebMigration
      */
-    public function safeDown($maxDown)
+    public function safeDown($maxDown = 1)
     {
         return $this->down($maxDown, 'safeDown');
     }
