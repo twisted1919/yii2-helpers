@@ -8,10 +8,10 @@ use yii\db\Query;
 use yii\db\Expression;
 
 /**
- * Class WebMigration
+ * Class Migration
  * @package app\helpers
  */
-class WebMigration extends Component
+class Migration extends Component
 {
     /**
      * The name of the dummy migration that marks the beginning of the whole migration history.
