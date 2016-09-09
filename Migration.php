@@ -228,7 +228,7 @@ class Migration extends Component
 
     /**
      * @param int $maxUp
-     * @return WebMigration
+     * @return $this
      */
     public function safeUp($maxUp = 1)
     {
@@ -237,7 +237,7 @@ class Migration extends Component
 
     /**
      * @param $maxDown
-     * @return WebMigration
+     * @return $this
      */
     public function safeDown($maxDown = 1)
     {
