@@ -14,6 +14,11 @@ use yii\db\Expression;
 class WebMigration extends Component
 {
     /**
+     * The name of the dummy migration that marks the beginning of the whole migration history.
+     */
+    const BASE_MIGRATION = 'm000000_000000_base';
+    
+    /**
      * @var string
      */
     public $db = 'db';
@@ -86,7 +91,10 @@ class WebMigration extends Component
 
         /* start capturing the output */
         ob_start();
-
+        
+        /* in case the table does not exists, create it */
+        $this->createMigrationsHistoryTable();
+        
         /* run each migration that hasn't been applied */
         foreach ($finder as $file) {
 
@@ -175,6 +183,9 @@ class WebMigration extends Component
         /* start capturing the output */
         ob_start();
 
+        /* in case the table does not exists, create it */
+        $this->createMigrationsHistoryTable();
+        
         /* run each migration that hasn't been applied */
         foreach ($finder as $file) {
 
@@ -231,5 +242,26 @@ class WebMigration extends Component
     public function safeDown($maxDown = 1)
     {
         return $this->down($maxDown, 'safeDown');
+    }
+
+    /**
+     * Creates the migrations history table.
+     */
+    protected function createMigrationsHistoryTable()
+    {
+        $db = app_get($this->db);
+        if ($db->schema->getTableSchema($this->migrationsTable, true) !== null) {
+            return;
+        }
+
+        $db->createCommand()->createTable($this->migrationsTable, [
+            'version'    => 'varchar(180) NOT NULL PRIMARY KEY',
+            'apply_time' => 'integer',
+        ])->execute();
+        
+        $db->createCommand()->insert($this->migrationsTable, [
+            'version'    => self::BASE_MIGRATION,
+            'apply_time' => time(),
+        ])->execute();
     }
 }
