@@ -61,6 +61,9 @@ class Migration extends Component
         /* set the counter */
         $counter = 0;
 
+        /* in case the table does not exists, create it */
+        $this->createMigrationsHistoryTable();
+        
         /* search for migration files */
         $finder = new Finder();
         $finder
@@ -91,9 +94,6 @@ class Migration extends Component
 
         /* start capturing the output */
         ob_start();
-        
-        /* in case the table does not exists, create it */
-        $this->createMigrationsHistoryTable();
         
         /* run each migration that hasn't been applied */
         foreach ($finder as $file) {
@@ -149,6 +149,9 @@ class Migration extends Component
         /* set the counter */
         $counter = 0;
 
+        /* in case the table does not exists, create it */
+        $this->createMigrationsHistoryTable();
+
         /* search for migration files */
         $finder = new Finder();
         $finder
@@ -182,9 +185,6 @@ class Migration extends Component
 
         /* start capturing the output */
         ob_start();
-
-        /* in case the table does not exists, create it */
-        $this->createMigrationsHistoryTable();
         
         /* run each migration that hasn't been applied */
         foreach ($finder as $file) {
