@@ -99,7 +99,7 @@ class Migration extends Component
         foreach ($finder as $file) {
 
             /* make sure we don't go over the limit, if any */
-            if ($counter > 0 && $counter >= $maxUp) {
+            if ($maxUp > 0 && $counter > 0 && $counter >= $maxUp) {
                 break;
             }
 
@@ -190,7 +190,7 @@ class Migration extends Component
         foreach ($finder as $file) {
 
             /* make sure we don't go over the limit, if any */
-            if ($counter > 0 && $counter >= $maxDown) {
+            if ($maxDown > 0 && $counter > 0 && $counter >= $maxDown) {
                 break;
             }
 
