@@ -5,7 +5,6 @@ namespace twisted1919\helpers;
 use Symfony\Component\Finder\Finder;
 use yii\base\Component;
 use yii\db\Query;
-use yii\db\Expression;
 
 /**
  * Class Migration
@@ -123,7 +122,7 @@ class Migration extends Component
             /* update the migrations table */
             app_get($this->db)->createCommand()->insert($this->migrationsTable, [
                 'version'    => $version,
-                'apply_time' => new Expression('NOW()'),
+                'apply_time' => time(),
             ])->execute();
         }
 
