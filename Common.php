@@ -115,7 +115,7 @@ class Common
 	    if (defined('PHP_BINDIR') && PHP_BINDIR) {
 		    $variants = array('php-cli', 'php');
 		    foreach ($variants as $variant) {
-			    if (is_file($cliPath = PHP_BINDIR . DIRECTORY_SEPARATOR . $variant)) {
+			    if (@is_file($cliPath = PHP_BINDIR . DIRECTORY_SEPARATOR . $variant)) {
 				    return $cliPath;
 			    }
 		    }
