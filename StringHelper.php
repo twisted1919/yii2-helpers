@@ -21,7 +21,7 @@ class StringHelper extends \yii\helpers\StringHelper
     /**
      * @param $string
      * @param string $separator
-     * @return array|trim
+     * @return array
      */
     public static function getArrayFromString($string, $separator = ',')
     {
